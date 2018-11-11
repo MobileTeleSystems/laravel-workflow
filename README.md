@@ -3,6 +3,8 @@
 
 ## Installation
 
+    composer require php-utils/laravel-workflow
+
 Add following to config/app.php
 ```
   'providers' => [

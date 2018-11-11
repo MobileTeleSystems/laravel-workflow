@@ -35,6 +35,8 @@ you should extend it from ```Workflow\Commands\QueuedCommand```.
 ## Example
 You can see example in config/workflow.php after installation.
 
+Full example: https://github.com/vadim-ostapenko/workflow/blob/master/README.md
+
 Config example:
 ```
  'lesson' => [

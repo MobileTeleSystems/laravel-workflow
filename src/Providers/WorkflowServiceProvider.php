@@ -3,7 +3,6 @@
 namespace Workflow\Providers;
 
 
-use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 use Workflow\Registry;
 use Workflow\Parser;
@@ -24,7 +23,7 @@ class WorkflowServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('workflow', function (Application $app) {
+        $this->app->singleton('workflow', function ($app) {
             $registry = new Registry();
             $config   = $app->make('config')->get('workflow', []);
 

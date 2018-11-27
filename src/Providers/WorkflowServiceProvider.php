@@ -28,7 +28,7 @@ class WorkflowServiceProvider extends ServiceProvider
             $config   = $app->make('config')->get('workflow', []);
 
             (new Parser)
-                ->parseArray($config)
+                ->parse($config)
                 ->each(function ($definition, $name) use ($registry) {
                     $registry->add($name, $definition);
                 });

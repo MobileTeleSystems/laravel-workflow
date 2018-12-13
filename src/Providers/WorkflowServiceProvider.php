@@ -21,7 +21,7 @@ class WorkflowServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->app->singleton('workflow', function ($app) {
             $registry = new Registry();
@@ -42,9 +42,9 @@ class WorkflowServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
-        $source = realpath($raw = dirname(dirname(__DIR__ )). '/config/workflow.php') ?: $raw;
+        $source = realpath($raw = dirname(__DIR__, 2). '/config/workflow.php') ?: $raw;
         
         $this->publishes([$source => config_path('workflow.php')], 'workflow');
         $this->mergeConfigFrom($source, 'workflow');
@@ -55,7 +55,7 @@ class WorkflowServiceProvider extends ServiceProvider
      *
      * @return array
      */
-    public function provides()
+    public function provides(): array
     {
         return ['workflow'];
     }

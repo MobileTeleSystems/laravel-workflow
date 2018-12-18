@@ -4,7 +4,7 @@ namespace Workflow;
 
 
 use Illuminate\Support\Facades\Bus;
-use Workflow\Contracts\Command;
+use Workflow\Contracts\Actions\Command;
 
 /**
  * Class BusWorkflow

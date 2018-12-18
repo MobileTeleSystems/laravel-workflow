@@ -1,5 +1,5 @@
 # Simple workflow for Laravel
-(only 5.6 version is currently supported)
+Supports 5.6 , 5.7
 
 ## Installation
 
